@@ -1,0 +1,17 @@
+.navbar .active{
+    color: rgb(211, 109, 25)!important;
+}
+
+.nav-item a{
+   color: white!important;
+}
+button.logout {
+    background: none;
+    font-weight: 500;
+    border: none;
+    color: white!important;
+}
+
+.nav-item .logout{
+    color: white!important;
+}

@@ -1,0 +1,45 @@
+.DownloadApp {
+    display: block;
+    box-sizing: border-box;
+    height: 500px;
+    border-radius: 50px;
+    background-color: #dc8a35;
+    clip-path: ellipse(219% 76% at 187.6% 0%);
+    position: relative;
+}
+      
+
+.DownloadApp h2{
+  font-family: 'Courgette', cursive;
+}
+
+
+@media screen and (max-width: 991px) {
+   
+.app2{
+order: 1;
+margin-left: 20px;
+}
+.app{
+order: 2;
+
+}
+.app3{
+order: 3;
+}
+
+.DownloadApp {
+    display: block;
+    box-sizing: border-box;
+    height: 700px;
+    border-radius: 50px;
+    background-color: #dc8a35;
+    /* clip-path: ellipse(319% 106% at 187.6% 0%); */
+    width: 180%;
+    margin: 0;
+    position: relative;
+}
+
+
+
+}
