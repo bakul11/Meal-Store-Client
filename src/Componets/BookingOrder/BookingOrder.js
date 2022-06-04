@@ -3,6 +3,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import Modal from 'react-modal';
 import auth from '../Firebase/FirebaseConfig';
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const customStyles = {
     content: {
@@ -23,20 +25,34 @@ const BookingOrder = ({ modalIsOpen, closeModal, food }) => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    const navigate = useNavigate();
+
     // Booking Order 
     const onSubmit = data => {
-        console.log(data);
+        const url = `http://localhost:5000/booking`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                navigate('/dashboard');
+                swal('Thanks for Your Order', 'Your Order Successfully Done', 'success');
+            })
     }
 
     return (
         <Modal
             isOpen={ modalIsOpen }
             onRequestClose={ closeModal }
-            // style={ customStyles }
+            style={ customStyles }
             contentLabel="Example Modal"
         >
             <div className="row">
-                <div className="col-lg-9  p-4 mx-auto">
+                <div className="col-lg-9 shadow-lg p-4 mx-auto">
                     <h2 className='text-center text-capitalize mb-1'>{ food?.name }</h2>
                     <img src={ food?.photo } alt="" style={ { height: '100px', width: '100px' } } className='d-block mx-auto mb-4' />
                     <div className="BookOrderNow">

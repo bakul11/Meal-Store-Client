@@ -5,6 +5,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import auth from '../Firebase/FirebaseConfig';
+import useToken from "../Hooks/useToken";
 
 const SocialMedia = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -15,7 +16,9 @@ const SocialMedia = () => {
 
     let from = location.state?.from?.pathname || "/";
 
-    if (user) {
+    const [token] = useToken(user);
+
+    if (token) {
         navigate(from, { replace: true });
         swal('Login Success', 'Login is Successfully Done', 'success');
     }

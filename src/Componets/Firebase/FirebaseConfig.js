@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDrqilKZmW1G930qlO4MBti47s2XA8V9HM",
-    authDomain: "practicepro-dcb22.firebaseapp.com",
-    projectId: "practicepro-dcb22",
-    storageBucket: "practicepro-dcb22.appspot.com",
-    messagingSenderId: "619038669449",
-    appId: "1:619038669449:web:0ac6bdfbab42343bf7a458"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

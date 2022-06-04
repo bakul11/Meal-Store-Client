@@ -16,6 +16,7 @@ const Navbar = () => {
         navigate('/');
         signOut(auth);
         swal('Logout Done', 'your account logout success', 'success');
+        localStorage.removeItem('accessToken');
     }
 
 
@@ -29,20 +30,25 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <NavLink className="nav-link ms-5" aria-current="page" to="/">Home</NavLink>
+                            <NavLink className="nav-link ms-5 text-light" aria-current="page" to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link ms-5" to="/foods">Foods</NavLink>
+                            <NavLink className="nav-link ms-5 text-light" to="/foods">Foods</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link ms-5" to="/contact">Contact</NavLink>
+                            <NavLink className="nav-link ms-5 text-light" to="/contact">Contact</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link ms-5" to="/register">Register</NavLink>
+                            <NavLink className="nav-link ms-5 text-light" to="/register">Register</NavLink>
                         </li>
                         <li className="nav-item ms-5 mt-2">
                             {
-                                user?.uid ? <p className='logout' onClick={ handleLogOut } style={ { fontWeight: '500', cursor: 'pointer' } }>LogOut</p> : <NavLink className="nav-NavLink text-light" to="/login" style={ { height: '2px', width: '100px', borderRadius: '50px', border: '1px solid white', padding: '5px 10px' } }>Login</NavLink>
+                                user?.uid ? <p className='logout' onClick={ handleLogOut } style={ { fontWeight: '500', cursor: 'pointer' } }>LogOut</p> : <NavLink className="nav-NavLink text-light " to="/login" style={ { height: '2px', width: '100px', borderRadius: '50px', border: '1px solid white', padding: '5px 10px' } }>Login</NavLink>
+                            }
+                        </li>
+                        <li className="nav-item">
+                            {
+                                user && <NavLink className="nav-link ms-5 text-light" to="/dashboard">DashBoard</NavLink>
                             }
                         </li>
                         <li className="nav-item">

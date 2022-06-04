@@ -5,9 +5,10 @@ import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from "../Firebase/FirebaseConfig";
 import swal from "sweetalert";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import logPhoto from '../../images/SignUp/sign2.png';
 import Slide from 'react-reveal/Slide';
+import useToken from "../Hooks/useToken";
 
 
 const Register = () => {
@@ -17,13 +18,23 @@ const Register = () => {
     const [matchPass, setMatchPass] = useState('');
     const [updateProfile] = useUpdateProfile(auth);
 
-    const navigate = useNavigate();
+    //==========================================
+    //Redirect Before Login 
+    let navigate = useNavigate();
+    let location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+    //==========================================
+
+
+    const [token] = useToken(user);
 
 
 
-    if (user) {
+
+    if (token) {
+        navigate(from, { replace: true });
         swal('Resister Success', 'Register is Successfully Done', 'success');
-        navigate('/');
     }
 
     const onSubmit = async (data) => {

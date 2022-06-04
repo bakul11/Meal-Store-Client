@@ -7,8 +7,7 @@ import BookingOrder from '../../BookingOrder/BookingOrder';
 const FoodDetails = () => {
     const { id } = useParams();
     const [food, setFood] = useState({});
-    console.log(food);
-
+  
     useEffect(() => {
         const url = `http://localhost:5000/singleFood/${id}`
         fetch(url)
@@ -42,7 +41,7 @@ const FoodDetails = () => {
                         <div className="shadow-lg rounded p-4">
                             <h2 className='text-capitalize mb-2'>{ food?.name }</h2>
                             <p>{ food?.discription }</p>
-                            <h5 className='mt-2'>Price : { food?.price }</h5>
+                            <h5 className='mt-2'>Price : ${ food?.price }</h5>
                             <button className="btn btn-warning mt-3" onClick={ openModal }>Confirm Order<FontAwesomeIcon icon={ faAngleDoubleRight } className='ms-2'></FontAwesomeIcon></button>
                             <BookingOrder modalIsOpen={ modalIsOpen } closeModal={ closeModal } food={food}></BookingOrder>
                         </div>

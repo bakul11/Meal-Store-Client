@@ -7,6 +7,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../Firebase/FirebaseConfig';
 import swal from 'sweetalert';
 import Slide from 'react-reveal/Slide';
+import useToken from '../Hooks/useToken';
 
 
 
@@ -20,6 +21,8 @@ const Login = () => {
 
     }
 
+    const [token] = useToken(user);
+
 
     //==========================================
     //Redirect Before Login 
@@ -30,7 +33,7 @@ const Login = () => {
     //==========================================
 
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
         swal('Login Success', 'Login is Successfully Done', 'success');
     }
