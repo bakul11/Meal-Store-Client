@@ -13,6 +13,8 @@ import MyOrder from './Componets/DashBoard/MyOrder';
 import AddProduct from './Componets/DashBoard/AddProduct';
 import Admin from './Componets/DashBoard/Admin';
 import NoMatch from './Componets/NoMatch/NoMatch';
+import AllBookingOrder from './Componets/DashBoard/AllBookingOrder';
+import FoodPages from './Componets/FoodPages/FoodPages';
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
         <Route path='/register' element={ <Register></Register> }></Route>
         <Route path='/login' element={ <Login></Login> }></Route>
         <Route path='/contact' element={ <Contact></Contact> }></Route>
+        <Route path='/foods' element={ <FoodPages ></FoodPages > }></Route>
 
         <Route path='/details/:id' element={
           <RequireAuth>
@@ -35,6 +38,7 @@ const App = () => {
           <Route index element={ <MyOrder></MyOrder> }></Route>
           <Route path='addproduct' element={ <AddProduct></AddProduct> }></Route>
           <Route path='allUser' element={ <Admin></Admin> }></Route>
+          <Route path='allBooking' element={ <AllBookingOrder></AllBookingOrder> }></Route>
         </Route>
         {/* ==============================DashBoard End ============================== */ }
 

@@ -17,7 +17,7 @@ const Pack = () => {
                 <div className="title">
                     <Slide left>
                         <div className="food-content text-center">
-                            <h2 style={ { fontFamily: 'Courgette' } } className='fs-2 text-capitalize'>how <span style={ { color: '#dc8a35', fontFamily: 'Courgette' } }>we serve</span> you</h2>
+                            <h2 className='fs-2 text-capitalize' style={ { fontFamily: 'Courgette' } }>how <span style={ { color: '#dc8a35', fontFamily: 'Courgette' } }>we serve</span> you</h2>
                         </div>
                     </Slide>
                 </div>

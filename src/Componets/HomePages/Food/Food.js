@@ -12,7 +12,7 @@ const Food = () => {
     return (
         <section>
             <div className='container' style={ { marginTop: '10px' } }>
-                <div className="row">
+                <div className="row gy-4">
                     <div className="col-lg-6">
                         <Slide left>
                             <div className="food-content">

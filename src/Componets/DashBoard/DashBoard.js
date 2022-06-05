@@ -1,4 +1,4 @@
-import { faPlus, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faShoppingCart, faUser, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -30,9 +30,14 @@ const DashBoard = () => {
                                 admin &&<NavLink className="nav-link ms-5 text-dark" aria-current="page" to="/dashboard/allUser"> <FontAwesomeIcon icon={ faUser } className='me-2'></FontAwesomeIcon> All User</NavLink>
                            }
                         </li>
+                        <li className="nav-item">
+                            {
+                                admin && <NavLink className="nav-link ms-5 text-dark" aria-current="page" to="/dashboard/allBooking"> <FontAwesomeIcon icon={ faUserGroup } className='me-2'></FontAwesomeIcon> All Booking</NavLink>
+                            }
+                        </li>
                     </ul>
                 </div>
-                <div className="col-lg-9 pb-5" style={ { background:'#e0e5e9'}}>
+                <div className="col-lg-9 pb-5" style={ { background:'#e9e9e9'}}>
                     <Outlet></Outlet>
                 </div>
             </div>
