@@ -17,7 +17,7 @@ const MyOrder = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const url = `http://localhost:5000/myOrder?email=${email}`;
+        const url = `https://dry-scrubland-18881.herokuapp.com/myOrder?email=${email}`;
         fetch(url, {
             method: 'GET',
             headers: {
@@ -44,7 +44,7 @@ const MyOrder = () => {
         const deleteOrder = window.confirm('Do You Want Delete This Product');
 
         if (deleteOrder) {
-            const url = `http://localhost:5000/deleteOrder/${id}`;
+            const url = `https://dry-scrubland-18881.herokuapp.com/deleteOrder/${id}`;
 
             fetch(url, {
                 method: 'DELETE'

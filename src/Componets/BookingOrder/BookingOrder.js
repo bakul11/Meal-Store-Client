@@ -29,7 +29,7 @@ const BookingOrder = ({ modalIsOpen, closeModal, food }) => {
 
     // Booking Order 
     const onSubmit = data => {
-        const url = `http://localhost:5000/booking`;
+        const url = `https://dry-scrubland-18881.herokuapp.com/booking`;
         fetch(url, {
             method: 'POST',
             headers: {

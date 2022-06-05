@@ -9,7 +9,7 @@ const FoodDetails = () => {
     const [food, setFood] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/singleFood/${id}`
+        const url = `https://dry-scrubland-18881.herokuapp.com/singleFood/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setFood(data))

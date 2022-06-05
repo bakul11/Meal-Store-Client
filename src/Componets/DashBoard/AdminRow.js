@@ -17,7 +17,7 @@ const AdminRow = ({ singleAdmin, index, admin, setAdmin }) => {
 
     //Make Admin user 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://dry-scrubland-18881.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -46,7 +46,7 @@ const AdminRow = ({ singleAdmin, index, admin, setAdmin }) => {
         const removeConfirmAdmin = window.confirm('Do You Want Delete Admin?');
 
         if (removeConfirmAdmin) {
-            const url = `http://localhost:5000/removeAdmin/${id}`;
+            const url = `https://dry-scrubland-18881.herokuapp.com/removeAdmin/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

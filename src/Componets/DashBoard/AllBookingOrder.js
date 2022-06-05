@@ -5,7 +5,7 @@ const AllBookingOrder = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/allOrder`;
+        const url = `https://dry-scrubland-18881.herokuapp.com/allOrder`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data))

@@ -8,7 +8,7 @@ const Admin = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allUser', {
+        fetch('https://dry-scrubland-18881.herokuapp.com/allUser', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
