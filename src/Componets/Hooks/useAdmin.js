@@ -7,7 +7,7 @@ const useAdmin = user => {
         const email = user?.email;
 
         if (email) {
-            const url = `https://dry-scrubland-18881.herokuapp.com/admin/${email}`;
+            const url = `https://floating-dusk-16413.herokuapp.com/admin/${email}`;
             fetch(url, {
                 method: 'GET',
                 headers: {

@@ -8,7 +8,7 @@ const Admin = () => {
 
 
     useEffect(() => {
-        fetch('https://dry-scrubland-18881.herokuapp.com/allUser', {
+        fetch('https://floating-dusk-16413.herokuapp.com/allUser', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

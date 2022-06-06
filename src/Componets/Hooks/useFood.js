@@ -6,7 +6,7 @@ const useFood = () => {
 
     // Load Food from Server Site 
     useEffect(() => {
-        fetch('https://dry-scrubland-18881.herokuapp.com/allfood')
+        fetch('https://floating-dusk-16413.herokuapp.com/allfood')
             .then(res => res.json())
             .then(data => {
                 setFood(data);
