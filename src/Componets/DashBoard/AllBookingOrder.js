@@ -5,8 +5,13 @@ const AllBookingOrder = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        const url = `https://floating-dusk-16413.herokuapp.com/allOrder`;
-        fetch(url)
+        const url = `https://salty-bastion-66163.herokuapp.com/allOrder`;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])

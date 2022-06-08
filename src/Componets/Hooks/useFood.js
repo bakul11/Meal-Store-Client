@@ -6,7 +6,12 @@ const useFood = () => {
 
     // Load Food from Server Site 
     useEffect(() => {
-        fetch('https://floating-dusk-16413.herokuapp.com/allfood')
+        fetch('https://salty-bastion-66163.herokuapp.com/allfood', {
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 setFood(data);

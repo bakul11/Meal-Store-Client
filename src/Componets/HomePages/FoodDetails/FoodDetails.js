@@ -9,7 +9,7 @@ const FoodDetails = () => {
     const [food, setFood] = useState({});
 
     useEffect(() => {
-        const url = `https://floating-dusk-16413.herokuapp.com/singleFood/${id}`
+        const url = `https://salty-bastion-66163.herokuapp.com/singleFood/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setFood(data))

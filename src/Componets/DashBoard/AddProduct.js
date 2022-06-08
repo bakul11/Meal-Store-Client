@@ -36,7 +36,7 @@ const AddProduct = () => {
                         photo: getImage
                     }
                     //send Data In Server 
-                    fetch('https://floating-dusk-16413.herokuapp.com/allFood', {
+                    fetch('https://salty-bastion-66163.herokuapp.com/allFood', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

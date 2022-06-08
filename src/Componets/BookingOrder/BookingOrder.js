@@ -29,7 +29,7 @@ const BookingOrder = ({ modalIsOpen, closeModal, food }) => {
 
     // Booking Order 
     const onSubmit = data => {
-        const url = `https://floating-dusk-16413.herokuapp.com/booking`;
+        const url = `https://salty-bastion-66163.herokuapp.com/booking`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -17,7 +17,7 @@ const MyOrder = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const url = `https://floating-dusk-16413.herokuapp.com/myOrder?email=${email}`;
+        const url = `https://salty-bastion-66163.herokuapp.com/myOrder?email=${email}`;
         fetch(url, {
             method: 'GET',
             headers: {
@@ -44,7 +44,7 @@ const MyOrder = () => {
         const deleteOrder = window.confirm('Do You Want Delete This Product');
 
         if (deleteOrder) {
-            const url = `https://floating-dusk-16413.herokuapp.com/deleteOrder/${id}`;
+            const url = `https://salty-bastion-66163.herokuapp.com/deleteOrder/${id}`;
 
             fetch(url, {
                 method: 'DELETE'
@@ -57,9 +57,6 @@ const MyOrder = () => {
                 })
         }
     }
-
-
-
 
 
     return (
