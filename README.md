@@ -3,8 +3,8 @@
 Live Site Link :  [www.mealstore.com](https://meal-store-92fae.web.app/).
 
 ## Features:
-1.•	Login, registration, reset password, logout, email verification, and Google sign in with Firebase authentication have all been added.
-2.•	There is a dashboard route which is private. After logging in, the user can see this. On the dashboard there are three nested routes for normal users and 5 nested routes for admin.
+•	Login, registration, reset password, logout, email verification, and Google sign in with Firebase authentication have all been added.
+•	There is a dashboard route which is private. After logging in, the user can see this. On the dashboard there are three nested routes for normal users and 5 nested routes for admin.
 
 
 ## Technology Used : 
